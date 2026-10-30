@@ -1,0 +1,23 @@
+{
+  "name":"parkzone-real-estate-erp","version":"0.3.2","private":true,"type":"module",
+  "scripts":{
+    "dev":"vite --host 0.0.0.0",
+    "build":"npm run build:web && npm run build:api",
+    "build:web":"tsc -b && vite build",
+    "build:api":"tsc -p tsconfig.api.json",
+    "preview":"vite preview --host 0.0.0.0",
+    "check":"tsc --noEmit && tsc -p tsconfig.api.json --noEmit",
+    "test":"tsx --test tests/*.test.ts",
+    "api:dev":"tsx api/server.ts",
+    "api:start":"node dist-api/api/server.js"
+  },
+  "dependencies":{
+    "@vitejs/plugin-react":"latest","lucide-react":"latest","react":"latest","react-dom":"latest",
+    "typescript":"latest","vite":"latest","vite-plugin-pwa":"latest","express":"latest","pg":"latest",
+    "zod":"latest","jose":"latest","helmet":"latest","cors":"latest","express-rate-limit":"latest"
+  },
+  "devDependencies":{
+    "@types/react":"^19.3.0","@types/react-dom":"^19.3.0","@types/express":"latest",
+    "@types/cors":"latest","@types/pg":"latest","tsx":"latest"
+  }
+}
