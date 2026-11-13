@@ -1,23 +1,45 @@
 {
-  "name":"parkzone-real-estate-erp","version":"0.3.2","private":true,"type":"module",
-  "scripts":{
-    "dev":"vite --host 0.0.0.0",
-    "build":"npm run build:web && npm run build:api",
-    "build:web":"tsc -b && vite build",
-    "build:api":"tsc -p tsconfig.api.json",
-    "preview":"vite preview --host 0.0.0.0",
-    "check":"tsc --noEmit && tsc -p tsconfig.api.json --noEmit",
-    "test":"tsx --test tests/*.test.ts",
-    "api:dev":"tsx api/server.ts",
-    "api:start":"node dist-api/api/server.js"
+  "name": "parkzone-real-estate-erp",
+  "version": "0.3.2",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "tsc -b && vite build",
+    "build:api": "tsc -p tsconfig.api.json",
+    "preview": "vite preview --host 0.0.0.0",
+    "check": "tsc --noEmit && tsc -p tsconfig.api.json --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "api:dev": "tsx server/index.ts",
+    "start:api": "npm run build:api && node dist-api/index.js",
+    "api:start": "npm run start:api",
+    "db:migrate": "tsx server/db/migrate.ts"
   },
-  "dependencies":{
-    "@vitejs/plugin-react":"latest","lucide-react":"latest","react":"latest","react-dom":"latest",
-    "typescript":"latest","vite":"latest","vite-plugin-pwa":"latest","express":"latest","pg":"latest",
-    "zod":"latest","jose":"latest","helmet":"latest","cors":"latest","express-rate-limit":"latest"
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "bcryptjs": "^3.0.3",
+    "cors": "latest",
+    "dotenv": "^18.0.10",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "jose": "latest",
+    "lucide-react": "latest",
+    "pg": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-plugin-pwa": "latest",
+    "zod": "latest"
   },
-  "devDependencies":{
-    "@types/react":"^19.3.0","@types/react-dom":"^19.3.0","@types/express":"latest",
-    "@types/cors":"latest","@types/pg":"latest","tsx":"latest"
+  "devDependencies": {
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/pg": "latest",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "latest"
   }
 }
