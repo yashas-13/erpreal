@@ -1,4 +1,15 @@
+
 {
-  "compilerOptions":{"target":"ES2022","module":"NodeNext","moduleResolution":"NodeNext","outDir":"dist-api","rootDir":".","strict":true,"esModuleInterop":true,"skipLibCheck":true,"declaration":true,"sourceMap":true},
-  "include":["api/**/*.ts"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./server",
+    "outDir": "./dist-api",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["server/**/*.ts"],
+  "exclude": ["node_modules", "dist-api"]
 }
